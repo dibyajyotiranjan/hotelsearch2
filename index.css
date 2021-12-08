@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li button{
+    
+    margin-left: 100px;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.body{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+.body .hotel{
+    position: relative;
+    height: 350px;
+    width: 400px;
+    left: 10px;
+    top: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.body .hotel form{
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.body .hotel form .country{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body .hotel form .country input{
+    height: 30px;
+    width: 19%;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.body .hotel form .area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body .hotel form .area input{
+    border: none;
+    height: 50px;
+    font-size: 23px;
+    padding-left: 20px;
+}
+.body .hotel form .cheak{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body .hotel form .cheak .mid button{
+    height: auto;
+    width: 50px;
+    border-radius: 5px;
+    background-color: rgb(139, 139, 170);
+}
+.body .hotel form .cheak input{
+    border: none;
+}
+.body .hotel form .guist{
+    display: flex;
+    flex-direction: column;
+}
+.body .hotel form .guist input{
+    border: none;
+    font-size: 20px;
+    height: 30px;
+}
+#subbtn{
+    position: absolute;
+    top: 340px;
+    left: 67px;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    background-color: orange;
+    color: white;
+    font-size: 30px;
+}
+hr{
+    width: 100%;
+    height: 1px;
+}
+.mform{
+    position: absolute;
+    top: 500px;
+    height: 100px;
+    width: 100px;
+    color: green;
+}
+.guistselect{
+     display: block;
+    padding: 15px;
+    background-color: white;
+    position: absolute;
+    height: 200px;
+    width: 480px;
+    top: 405px;
+    left: 20px;
+    border: 1px solid black;
+}
+.guistselect #guistinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#guistinput .guists{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#guistinput .guists input{
+    padding-left: 22px;
+    height: 50px;
+    width: 70px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+}
+#fdone{
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  bottom: 20px;
+  right: 20px;
+}
+.remove{
+    display: none;
+}

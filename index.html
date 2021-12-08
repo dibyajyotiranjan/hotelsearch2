@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"><button>Hotels</button></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="body">
+        <div class="hotel">
+            <form id="formofhotel">
+                <div class="country">
+                 <input type="radio"id="india" name="country" value="india">india
+                 <input type="radio" value="international" name="country">international
+                </div>
+                <div class="area">
+                   <span>where</span>
+                <input type="text" placeholder="e.g - Area, Landmark& Hotel id" id="area"> 
+                </div>
+                
+                <hr>
+                <div class="cheak">
+                    <div class="in">
+                       <span>Cheak-in</span>
+                    <input type="date" id="cheakin" value="2021-11-05"> 
+                    </div>
+                    <div class="mid">
+                        <button>1Night</button>
+                    </div>
+                    <div class="out">
+                        <span>Cheak-out</span>
+                    <input type="date" id="cheakout" value="2021-11-05">
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="guist">
+                    <span>Guist & Rooms</span>
+                    <input type="text" placeholder="2 Guist in one room" id="guist" onclick="guistClick()">
+                    <hr>
+                    
+                </div>
+                <button id="subbtn" type="submit">Search Hotel</button>
+            </form>
+        </div>
+    </div>
+    <div class="remove" id="dibu">
+        <form id="guistinput">     
+        <div class="guists">
+            <label>Rooms(max 8)</label>
+            <input type="number" id="room" value="1">
+        </div>
+        <div class="guists">
+            <label>adult(12yr+)</label>
+            <input type="number" id="adult" value="2">
+        </div>
+        <div class="guists">
+            <label>children(0-12yr)</label>
+            <input type="number" id="child" value="3">
+        </div>
+        <input type="submit" id="fdone" onsubmit="sumithere()">
+    </form>
+    </form>
+</div>
+    <script>
+        let formofhotel = document.getElementById("formofhotel")
+        
+        formofhotel.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let input = document.getElementById("india").value
+            // let international = document.getElementById("international").value
+            let area = document.getElementById("area").value
+            let cheakin = document.getElementById("cheakin").value
+            let cheakout = document.getElementById("cheakout").value
+            let guist = document.getElementById("guist").value
+            console.log("this is out put")
+            console.log([input,area,cheakin,cheakout,guist])
+        })
+    </script>
+    <script>
+        guistClick=()=>{
+           
+            document.getElementById("dibu").classList.remove("remove");
+            document.getElementById("dibu").classList.add("guistselect");
+        }
+        let guistinput = document.getElementById("guistinput")
+        guistinput.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            console.log("done")
+            let guist = document.getElementById("guist");
+            let room = document.getElementById("room").value
+            let adult = document.getElementById("adult").value
+            let child = document.getElementById("child").value
+            let html = `${adult+child} Guist in ${room} Room`;
+            guist.value=html
+            document.getElementById("dibu").classList.remove("guistselect");
+            document.getElementById("dibu").classList.add("remove");
+        })
+    </script>
+</body>
+</html>
